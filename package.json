@@ -29,7 +29,10 @@
     "core-js": "^2.4.1",
     "rxjs": "5.0.1",
     "zone.js": "^0.8.4",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "v4.0.0-alpha.6",
+    "ng2-bootstrap": "^1.1.16-11",
+    "font-awesome": "^4.7.0"
+
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
