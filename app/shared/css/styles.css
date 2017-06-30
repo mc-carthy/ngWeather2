@@ -73,6 +73,10 @@
   margin-right: 20px;
 }
 
+we-item {
+    padding: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .weather-list {
     width: 80%;

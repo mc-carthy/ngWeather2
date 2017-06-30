@@ -1,9 +1,5 @@
-<div class="well">
+<div class="card card-block bg-faded">
     <h2>{{ weatherItem.cityName }}</h2>
-    <p>
-        <span class="label label-primary">
-            Temp
-        </span>
-        &nbsp; {{ weatherItem.description }}
-    </p>
+    <p><span class="badge badge-primary">Temp </span>&nbsp; {{ weatherItem.temperature }}°F</p>
+    <p><span class="badge badge-info">Outlook </span>&nbsp; {{ weatherItem.description }}</p>
 </div>
