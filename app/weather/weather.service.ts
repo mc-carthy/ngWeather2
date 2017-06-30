@@ -2,17 +2,9 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
-import "rxjs/add/operator/catch";
-import "rxjs/add/operator/debounceTime";
-import "rxjs/add/operator/distinctUntilChanged";
-import "rxjs/add/operator/do";
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/switchMap";
-import "rxjs/add/observable/throw";
-
 import { IWeather } from './weather';
 import { WEATHER_ITEMS } from './weather.data';
-import { URL, KEY, IMP } from './api';
+import { URL, KEY, MET, IMP } from './api';
 
 @Injectable()
 export class WeatherService {
@@ -39,7 +31,7 @@ export class WeatherService {
     searchWeatherData(cityName: string): Observable<IWeather[]>
     {
         return this.http.get(
-            `${this._url}${cityName}&APPID=${this._key}${this._imp}`
+            `${URL}${cityName}&APPID=${KEY}${MET}`
         )
             .map((res: Response) => <IWeather[]> res.json())
             .do(res => console.log('Weather Data Object: ', JSON.stringify(res)))

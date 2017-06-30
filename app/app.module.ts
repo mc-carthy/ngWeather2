@@ -16,6 +16,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { WeatherService } from './weather/weather.service';
 
+import './shared/rxjs-extensions';
+
 @NgModule({
     imports: [
         BrowserModule,
