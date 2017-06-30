@@ -3,10 +3,10 @@ import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
-  selector: 'ng-nav',
+  selector: 'we-nav',
   templateUrl: 'nav.template.html'
 })
 
 export class NavbarComponent {
-  appName: string = "Angular Boilerplate";
+  appName: string = "ngWeather";
 }
