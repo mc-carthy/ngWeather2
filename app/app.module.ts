@@ -20,6 +20,7 @@ import { WeatherService } from './weather/weather.service';
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         AppRoutingModule
     ],
     declarations: [

@@ -1,3 +1,4 @@
+import { IWeather } from './weather';
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -7,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class WeatherItemComponent {
+
+    @Input('item') weatherItem: IWeather;
     constructor() { }
 
 }
