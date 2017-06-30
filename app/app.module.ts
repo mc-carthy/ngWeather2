@@ -15,6 +15,7 @@ import { WeatherItemComponent } from './weather/weather-item.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { WeatherService } from './weather/weather.service';
+import { ProfileService } from './sidebar/profile.service';
 
 import './shared/rxjs-extensions';
 
@@ -36,7 +37,8 @@ import './shared/rxjs-extensions';
         SidebarComponent
     ],
     providers: [
-        WeatherService
+        WeatherService,
+        ProfileService
     ],
     bootstrap: [AppComponent]
 })
