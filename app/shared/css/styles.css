@@ -67,14 +67,18 @@
 }
 
 .weather-search input {
-  padding: 3px 5px;
+  padding: 1rem;
   outline: none;
   width: 75%;
   margin-right: 20px;
 }
 
-we-item {
+we-item, we-sidebar {
     padding: 1rem;
+}
+
+.card {
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {

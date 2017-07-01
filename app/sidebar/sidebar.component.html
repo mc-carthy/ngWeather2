@@ -1,0 +1,51 @@
+<h3>Saved Profiles</h3>
+<div class="container">
+    <div class="card" *ngFor="let profile of profiles">
+        <div class="card-header card-info clearfix">
+            <h4>
+                {{ profile.profileName }}
+                <button class="close" type="button" (click)="onDeleteProfile($event, profile)">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+            </h4>
+        </div>
+        <div class="card-block bg-faded">
+            <p>City: 
+                <a href="#" (click)="onLoadProfile(profile)">{{ profile.city }}</a>
+            </p>
+        </div>
+    </div>
+    <form (ngSubmit)="onSaveNew()">
+        <h3>Add New Profile</h3>
+        <div class="form-group">
+            <input 
+                type="text"
+                [(ngModel)]="newProfile.profileName"
+                name="profileName"
+                placeholder="Name"
+                class="form-control profile-input"
+            >
+            <input
+                type="text"
+                [(ngModel)]="newProfile.city"
+                name="profileCity"
+                placeholder="City"
+                class="form-control profile-input"
+            >
+        </div>
+        <button class="btn btn-primary profile-btn" type="submit">Save to Profile</button>
+    </form>
+
+    <div class="card card-block" *ngIf="weatherItem">
+        <h2>{{ weatherItem.name }}</h2>
+        <p>
+            <span class="badge badge-primary">Temp</span>
+            &nbsp; {{ weatherItem.main.temp }}°C
+        </p>
+        <p>
+            <span class="badge badge-info">Outlook</span>
+            &nbsp; {{ weatherItem.weather[0].description }}
+        </p>
+    </div>
+</div>
